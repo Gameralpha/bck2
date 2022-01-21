@@ -236,17 +236,12 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_photo(
-        DevilAngel_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-            uptime
-        ),
-         parse_mode=ParseMode.HTML,
-         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="Support ✨", url="t.me/lunasupportz")]]
-         ),
-     )
-                                 
-def error_handler(update, context):
+        update.effective_message.reply_text(
+            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
+            parse_mode=ParseMode.HTML,
+        )
+        
+ def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
     # Log the error before we do anything else, so we can see it even if something breaks.
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
