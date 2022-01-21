@@ -81,14 +81,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-[thecoolmoon](https://telegra.ph/file/52b1b195f0d7df5ff79b2.jpg)
+
 ╔ /start: Starts me! You've probably already used this.
 ╠ /help: Click this, I'll let you know about myself!
 ╠ /donate: You can support my creater using this command.
 ╠ /settings : 
 ╚══║in PM: will send you your settings for all supported modules.
    ╚ in a Group: will redirect you to pm, with all that chat's settings.
-   Powered by : [ALAN WALKER]
+   Powered by : [ALAN WALKER](https://telegra.ph/file/52b1b195f0d7df5ff79b2.jpg)
 """
 
 buttons = [
