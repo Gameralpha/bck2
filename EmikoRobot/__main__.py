@@ -88,7 +88,7 @@ PM_START_TEXT = """
 ╠ /settings : 
 ╚══║in PM: will send you your settings for all supported modules.
    ╚ in a Group: will redirect you to pm, with all that chat's settings.
-   Powered by : [ALAN WALKER](https://t.me/tamilchating_fed)
+   Powered by : [ALAN WALKER])
 """
 
 buttons = [
