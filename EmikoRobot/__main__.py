@@ -79,6 +79,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+DevilAngel_IMG = "https://telegra.ph/file/4e2e95bf4c2b2e52f6431.jpg
 
 PM_START_TEXT = """
 
@@ -209,7 +210,7 @@ def start(update: Update, context: CallbackContext):
                 )
 
             elif args[0].lower().startswith("stngs_"):
-                match = re.match("stngs_(.*)", args[0].lower())
+                match = re.match("stngs_args[0].lower())
                 chat = dispatcher.bot.getChat(match.group(1))
 
                 if is_user_admin(chat, update.effective_user.id):
@@ -235,12 +236,16 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
-            parse_mode=ParseMode.HTML,
-        )
-
-
+        update.effective_message.reply_photo(
+        DevilAngel_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            uptime
+        ),
+         parse_mode=ParseMode.HTML,
+         reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="Support ✨", url="t.me/lunasupportz")]]
+         ),
+     )
+                                 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
     # Log the error before we do anything else, so we can see it even if something breaks.
