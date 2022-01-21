@@ -101,7 +101,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add LUNA To Your Group ➗", url="t.me/EmiexRobot?startgroup=new"
+            text="➗ Add LUNA To Your Group ➗", url="t.me/Missharelyluna_bot?startgroup=new"
         ),
     ],
 ]
